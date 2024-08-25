@@ -1,0 +1,11 @@
+<script setup>
+
+</script>
+<template>
+    <div class="relative">
+        <Navber></Navber>
+        <div class="container mx-auto">
+            <slot></slot>
+        </div>
+    </div>
+</template>
