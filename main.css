@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body{
+    background-color: #F1F2F6;
+}
+.primary-btn {
+    background-color: rgb(228 128 29);
+}
+.text-primary{
+    color: rgb(228 128 29);
+}
+
+

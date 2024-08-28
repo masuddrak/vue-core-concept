@@ -3,8 +3,8 @@
 </script>
 <template>
     <div class="relative">
-        <Navber></Navber>
-        <div class="container mx-auto">
+        <Navbar></Navbar>
+        <div>
             <slot></slot>
         </div>
     </div>
