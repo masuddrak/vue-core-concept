@@ -14,9 +14,7 @@
                     data-lf-vimeo-playback-inspected-lynor8xojbnawqjz="true"></iframe>
             </div>
         </div>
-        <p class="flex justify-center"> <button
-                class="text-white font-bold primary-btn text-xl rounded-full flex justify-center items-center px-[40px] py-3 max-h-[50px] mx-auto mt-[50px]">Book
-                A Demo</button></p>
+        <p class="flex justify-center"><CommonBtn></CommonBtn></p>
     </div>
 
 </template>

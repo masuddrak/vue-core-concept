@@ -22,13 +22,11 @@ const findArchiveComunited=findBanner?.archiveComunited
             <ArchiveFormCard></ArchiveFormCard>
             <SharpArchive :findArchiveComunited="findArchiveComunited"></SharpArchive>
             <CustomersSection></CustomersSection>
-            <div class="mt-[130px] space-y-[50px]">
+            <div class="mt-[130px] pace-y-[20px] lg:space-y-[50px]">
                 <h2
                     class="text-[#505050] md:text-[50px] text-[40px] md:leading-[60px] leading-[50px] w-full lg:max-w-[1182px] text-center font-bold mx-auto">
                     Schedule a Meeting</h2>
-                <p class="flex justify-center"> <button
-                        class="text-white font-bold primary-btn text-xl rounded-full flex justify-center items-center px-[40px] py-3 max-h-[50px] mx-auto ">Book
-                        A Demo</button></p>
+                <p class="flex justify-center"><CommonBtn></CommonBtn></p>
             </div>
         </div>
     </div>
