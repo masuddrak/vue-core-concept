@@ -2,7 +2,7 @@
 import { useStore } from "vuex";
 const menuIcon = ref(false);
 const store = useStore();
-const allCards = computed(() => store?.getters?.allCards);
+const allCards = computed(() => store?.getters?.allCards || []);
 console.log(menuIcon.value);
 const handelMen = (value) => {
   menuIcon.value = value;
@@ -17,7 +17,7 @@ const handelMen = (value) => {
         v-if="menuIcon"
       >
         <div v-for="(card, index) in allCards" :key="index" class="">
-          <nuxt-link :to="`${card.id}`">{{ card.id }}</nuxt-link>
+          <nuxt-link :to="`/page/${card.id}`">{{ card.id }}</nuxt-link>
         </div>
       </div>
 
