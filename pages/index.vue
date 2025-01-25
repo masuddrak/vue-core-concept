@@ -5,25 +5,24 @@ import { computed } from "vue";
 const route = useRoute();
 const store = useStore();
 // archive banner
-const allCards = computed(() => store?.getters?.allCards);
-const findBanner = (allCards?.value).find(
-  (card) => card.id == "public-schools-boston"
+const homeArchive = computed(() =>
+  store?.getters?.homeArchive("public-schools-boston")
 );
-// public Schools Cards archiveSection
-const findpublicSchoolsCard = findBanner?.archiveSection;
-// public Schools Cards archiveComunited
-const findArchiveComunited = findBanner?.archiveComunited;
+
+const findpublicSchoolsCard = homeArchive?.archiveSection;
 </script>
 <template>
   <!-- banner -->
   <div class="max-w-[1920px] mx-auto">
-    <ArchiveBanner :findBanner="findBanner"></ArchiveBanner>
+    <ArchiveBanner :findBanner="homeArchive"></ArchiveBanner>
     <div class="px-2 lg:px-5 xl:px-[178px]">
       <ArchiveCardSection
-        :findpublicSchoolsCard="findpublicSchoolsCard"
+        :findpublicSchoolsCard="homeArchive?.archiveSection"
       ></ArchiveCardSection>
       <ArchiveFormCard></ArchiveFormCard>
-      <SharpArchive :findArchiveComunited="findArchiveComunited"></SharpArchive>
+      <SharpArchive
+        :findArchiveComunited="homeArchive?.archiveComunited"
+      ></SharpArchive>
       <CustomersSection></CustomersSection>
       <div class="mt-[130px] pace-y-[20px] lg:space-y-[50px]">
         <h2
